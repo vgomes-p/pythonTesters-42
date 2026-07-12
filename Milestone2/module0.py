@@ -6,7 +6,7 @@
 #    By: vigomes- <vigomes-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/12 14:55:15 by vigomes-          #+#    #+#              #
-#    Updated: 2026/07/12 14:56:53 by vigomes-         ###   ########.fr        #
+#    Updated: 2026/07/12 15:19:25 by vigomes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ import time as tm
 import os
 import subprocess
 import argparse
+
 
 DEFAULT = "\033[m"
 RED = "\033[1;31m"
@@ -115,8 +116,10 @@ def clear() -> None:
     except Exception as e:
         pass
 
+
 def printnl(times: int=0) -> None:
     print("\n" * times, end="")
+
 
 def error_message(error: str, x: bool=True) -> None:
     if (x):
@@ -205,6 +208,7 @@ def exec_params(function, function_name: str, parameters: dict, expected: dict, 
         i += 1;
     printnl()
     return 0, stats
+
 
 def biggest_name(dict_names: dict) -> int:
     biggest = 0
@@ -325,6 +329,7 @@ def exec_tests(view: bool, time: float) -> int:
         print(f"{GREEN if checker == 0 else RED}{auto_final_text_s if checker == 0 else auto_final_text_f}{DEFAULT}")
     return ret
 
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Tester for Python Module 0 from Ecole 42")
     parser.add_argument("--visual", action="store_true", help="Print functions returns")
@@ -337,8 +342,7 @@ def main() -> int:
         view = True
     elif args.fast:
         time = 0.05
-    exec_tests(view, time)
-
+    return exec_tests(view, time)
 
 
 if __name__ == "__main__":
