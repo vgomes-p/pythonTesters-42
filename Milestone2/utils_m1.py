@@ -6,7 +6,7 @@
 #    By: vigomes- <vigomes-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/19 20:01:16 by vigomes-          #+#    #+#              #
-#    Updated: 2026/07/20 20:51:05 by vigomes-         ###   ########.fr        #
+#    Updated: 2026/07/21 18:15:56 by vigomes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -123,25 +123,25 @@ f2e = {
     }
 
 f3e1 = {
-    0: "Created:Rose: 25.0cm, 30 days old\n\nTotal plants: 1\n",
-    1: "Created:Sunflower: 80.0cm, 45 days old\n\nTotal plants: 1\n",
-    2: "Created:Cactus: 15.0cm, 120 days old\n\nTotal plants: 1\n",
-    3: "Created:Olive: 150.0cm, 365 days old\n\nTotal plants: 1\n",
-    4: "Created:Venus: 9.0cm, 1 days old\n\nTotal plants: 1\n",
-    5: "Created:whatever: 0.0cm, 1 days old\n\nTotal plants: 1\n",
+    0: "Created: Rose: 25.0cm, 30 days old\nTotal of plants: 1\n",
+    1: "Created: Sunflower: 80.0cm, 45 days old\nTotal of plants: 2\n",
+    2: "Created: Cactus: 15.0cm, 120 days old\nTotal of plants: 3\n",
+    3: "Created: Olive: 150.0cm, 365 days old\nTotal of plants: 4\n",
+    4: "Created: Venus: 9.0cm, 1 days old\nTotal of plants: 5\n",
+    5: "Created: whatever: 0.0cm, 1 days old\nTotal of plants: 6\n",
 }
 
 f3e2 = {
-    0: "Created:Rose: 25.0cm, 30 days old\n\nno class variable like total_plant\n",
-    1: "Created:Sunflower: 80.0cm, 45 days old\n\nno class variable like total_plant\n",
-    2: "Created:Cactus: 15.0cm, 120 days old\n\nno class variable like total_plant\n",
-    3: "Created:Olive: 150.0cm, 365 days old\n\nno class variable like total_plant\n",
-    4: "Created:Venus: 9.0cm, 1 days old\n\nno class variable like total_plant\n",
-    5: "Created:whatever: 0.0cm, 1 days old\n\nno class variable like total_plant\n",
+    0: "Created: Rose: 25.0cm, 30 days old\nno class variable like total_plant\n",
+    1: "Created: Sunflower: 80.0cm, 45 days old\nno class variable like total_plant\n",
+    2: "Created: Cactus: 15.0cm, 120 days old\nno class variable like total_plant\n",
+    3: "Created: Olive: 150.0cm, 365 days old\nno class variable like total_plant\n",
+    4: "Created: Venus: 9.0cm, 1 days old\nno class variable like total_plant\n",
+    5: "Created: whatever: 0.0cm, 1 days old\nno class variable like total_plant\n",
 }
 
 f3e3 = [
-    "Created: Rose: 25.0cm, 30 days old\nCreated: Sunflower: 80.0cm, 45 days old\nCreated: Cactus: 15.0cm, 120 days old\nCreated: Olive: 150.0cm, 365 days old\nCreated: Venus: 9.0cm, 1 days old\nCreated: whatever: 0.0cm, 1 days old\nTotal plants: 6\n",
+    "Created: Rose: 25.0cm, 30 days old\nCreated: Sunflower: 80.0cm, 45 days old\nCreated: Cactus: 15.0cm, 120 days old\nCreated: Olive: 150.0cm, 365 days old\nCreated: Venus: 9.0cm, 1 days old\nCreated: whatever: 0.0cm, 1 days old\nTotal of plants: 6\n",
     "Created: Rose: 25.0cm, 30 days old\nCreated: Sunflower: 80.0cm, 45 days old\nCreated: Cactus: 15.0cm, 120 days old\nCreated: Olive: 150.0cm, 365 days old\nCreated: Venus: 9.0cm, 1 days old\nCreated: whatever: 0.0cm, 1 days old\nno class variable like total_plant\n"
     ]
 

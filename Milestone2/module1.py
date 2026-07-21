@@ -6,7 +6,7 @@
 #    By: vigomes- <vigomes-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/12 14:55:15 by vigomes-          #+#    #+#              #
-#    Updated: 2026/07/20 20:52:01 by vigomes-         ###   ########.fr        #
+#    Updated: 2026/07/21 18:20:03 by vigomes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,11 +33,11 @@ from io import StringIO
 from contextlib import redirect_stdout
 import time as tm
 import argparse
-from utils_m0 import list_of_flowers0, list_of_flowers1, list_of_plants0, list_of_plants1, list_of_plants2, list_of_trees, list_of_vegetables
-from utils_m0 import clear, printnl, error_message, biggest_name
-from utils_m0 import DEFAULT, RED, GREEN,  PINK, CYAN
-from utils_m0 import TEXTS, MID_IDS, END_IDS
-from utils_m0 import f0e, f1e, f2e, f3e1, f3e2, f3e3
+from utils_m1 import list_of_flowers0, list_of_flowers1, list_of_plants0, list_of_plants1, list_of_plants2, list_of_trees, list_of_vegetables
+from utils_m1 import clear, printnl, error_message, biggest_name
+from utils_m1 import DEFAULT, RED, GREEN,  PINK, CYAN
+from utils_m1 import TEXTS, MID_IDS, END_IDS
+from utils_m1 import f0e, f1e, f2e, f3e1, f3e2, f3e3
 import pdb
 
 
@@ -128,26 +128,31 @@ def exec_special3(fclass, id: int, modules: dict, assign_name: str, parameters: 
     expected1 = expected.get(1)
     expected2 = expected.get(2)
     expected3 = expected.get(3)
+    # print(expected3[0])
+    # print(expected3[1])
+    # return 0
     stats = 0
     i = 0
+    # print(expected1)
+    # print(expected2)
+    # print(expected3)
 
     for p in parameters:
+        tm.sleep(time)
         plant = parameters[p]
         buffer1 = StringIO()
-        with redirect_stdout(buffer1):
-            try:
-                plants = fclass(plant["name"], plant["height"], plant["age"], plant["grpd"])
+        try:
+            with redirect_stdout(buffer1):
+                plants = fclass(plant["name"], plant["height"], plant["plant_age"], plant["grpd"])
                 try:
                     print(f"Total of plants: {plants.total_plants}")
                 except:
                     print("no class variable like total_plant")
-            except Exception as e:
-                error_message(f"Serious error on running {assign_name}: {e}")
-                return -1
+        except Exception as e:
+            error_message(f"Serious error on running {assign_name}: {e}")
+            return -1
         output = buffer1.getvalue()
-        if output == expected1:
-            print('✅', end='', flush=True)
-        elif output == expected2:
+        if output == expected1[i] or output == expected2[i]:
             print('✅', end='', flush=True)
         else:
             print('❌', end='', flush=True)
@@ -155,31 +160,32 @@ def exec_special3(fclass, id: int, modules: dict, assign_name: str, parameters: 
         if view:
             print(f"\nEXPECTED 1:\n{expected1[i]}\nEXPECTED 2:\n{expected2[i]}\nOUTPUT:\n{output}")
         i += 1
+    del(plants)
+    fclass.total_plants = 0
 
+    tm.sleep(time)
     i = 0
     buffer2 = StringIO()
-    with redirect_stdout(buffer2):
-        try:
+    try:
+        with redirect_stdout(buffer2):
             for p in parameters:
-                plant = parameters[p]
-                plants = fclass(plant["name"], plant["height"], plant["age"], plant["grpd"])
+                plant2 = parameters[p]
+                plants2 = fclass(plant2["name"], plant2["height"], plant2["plant_age"], plant2["grpd"])
             try:
-                print(f"Total of plants: {plants.total_plants}")
+                print(f"Total of plants: {plants2.total_plants}")
             except:
                 print("no class variable like total_plant")
-        except Exception as e:
-                error_message(f"Serious error on running {assign_name}: {e}")
-                return -1
-    output = buffer1.getvalue()
-    if output == expected3[0]:
-        print('✅', end='', flush=True)
-    elif output == expected3[1]:
+    except Exception as e:
+        error_message(f"Serious error on running {assign_name}: {e}")
+        return -1
+    output = buffer2.getvalue()
+    if output == str(expected3[0]) or output == str(expected3[1]):
         print('✅', end='', flush=True)
     else:
         print('❌', end='', flush=True)
         stats += 1
     if view:
-        print(f"\nFINAL EXPECTED 1:\n{expected1[i]}\nFINAL EXPECTED 2:\n{expected2[i]}\nOUTPUT:\n{output}")
+        print(f"\nFINAL EXPECTED 1:\n{expected3[0]}\nFINAL EXPECTED 2:\n{expected3[1]}\nOUTPUT:\n{output}")
         i += 1
     return stats
 
@@ -188,7 +194,7 @@ def exec_class(fclass, id: int, modules: dict, assign_name: str, parameters: dic
     i = 0
     stats = 0
     print(f"{CYAN}\n{assign_name}:{' ' * space_time}{DEFAULT}", end=('\n' if view else ''), flush=True)
-    if i == 3:
+    if id == 3:
         ret = exec_special3(fclass, id, modules, assign_name, parameters, expected, view, time)
         if ret == -1:
             return 1, 1
