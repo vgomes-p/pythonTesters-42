@@ -1,9 +1,9 @@
 # Python Testers for 42 projects
-### These are testers for Ecole 42 python assignments. Some show success (✅) or failure (❌) and some others will automatically run the function and show the output.
+### These are testers for École 42 Python assignments. Some show success (✅) or failure (❌), and others will automatically run the function and show the output.
 
 
 ## How to use
-### Clone the assignment tester into the assignment root repository
+### Clone the assignment tester into the module root repository
 
 ### For Milestone 2
 #### Way to run (for all tests):
