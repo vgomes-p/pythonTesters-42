@@ -497,8 +497,8 @@ def main() -> int:
     args = parser.parse_args()
     if args.visual:
         view = True
-    elif args.fast:
-        time = 0.05
+    if args.fast:
+        time = 0.03
     return exec_tests(view, time)
 
 
