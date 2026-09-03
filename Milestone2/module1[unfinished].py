@@ -1,31 +1,33 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    module1.py                                         :+:      :+:    :+:    #
+#    module1[unfinished].py                             :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: vigomes- <vigomes-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/12 14:55:15 by vigomes-          #+#    #+#              #
-#    Updated: 2026/07/21 18:20:03 by vigomes-         ###   ########.fr        #
+#    Updated: 2026/09/03 19:26:27 by vigomes-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # YOU MIGHT WANT TO READ THIS
 """
-First of all, i'm also asking me what the fuck is this script.
+First of all, I'm also asking myself: what the fuck is this script?
 
-Second of all, it all started beautifully, but after ex1 I notice that people
-will implement the assignments differently and it was in that moment that i knew
-I fucked up. That's how what should be simple became a monster (because I refuse
-to ask AI to do everything, I want to learn by making the worst code I can and
-do it better the next time.)
+Second of all, it all started beautifully, but after ex1, I noticed that people
+would implement the assignments differently, and it was at that moment that I knew
+I fucked up. That's how what should have been simple became a monster (because I
+refuse to ask AI to do everything. I want to learn by making the worst code I can
+and doing it better the next time).
 
-I don't recomend you to modify this code at any line, it might break and you
-probably will want to fix it and spend a long time on it. You better go learn
+I don't recommend modifying this code at any line. It might break, and you will
+probably want to fix it and spend a long time doing so. You'd be better off learning
 something new.
 
-As a warn, this is the amount of days spend on this code (fixing, improving or
-implementing something): 3 days
+As a warning, this is the number of days spent on this code (fixing, improving,
+or implementing something): 8 days.
+
+I AIN'T FINISHING THIS. GOOD LUCK.
 """
 
 from unittest.mock import patch

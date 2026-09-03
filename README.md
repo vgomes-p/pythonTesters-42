@@ -6,12 +6,21 @@
 ### Clone the assignment tester into the assignment root repository
 
 ### For Milestone 2
+#### Way to run (for all tests):
+```bash
+python moduleN.py --fast
+```
 #### Python Module 0
 ```bash
 curl -O https://raw.githubusercontent.com/vgomes-p/pythonTesters-42/main/Milestone2/module0.py
 ```
-#### Way to run:
+#### Python Module 1 | [Unfinished]
 ```bash
-python module0.py --fast
+curl -O https://raw.githubusercontent.com/vgomes-p/pythonTesters-42/main/Milestone2/module1[unfinished].py
+curl -O https://raw.githubusercontent.com/vgomes-p/pythonTesters-42/main/Milestone2/utils_m1.py
+```
+#### Python Module 2
+```bash
+curl -O https://raw.githubusercontent.com/vgomes-p/pythonTesters-42/main/Milestone2/module2.py
 ```
 > Flags available: `--help`, `--visual`and `--fast`
